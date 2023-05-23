@@ -1,14 +1,16 @@
 html{
     font-family: sans-serif;
     color: #fff;
+    background-color: rgba(14, 11, 11, 0.73);
 }
 
 html,body{
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(14, 11, 11, 0.73);
+    background-color: rgb(14, 11, 11);
 }
+
 
 /* ---------------------NAV BAR STREKER--------------------- */
 
@@ -53,28 +55,31 @@ a {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    height: 15%;
 }
 
 .ikoner {
     display: flex;
     align-items: center;
-    padding-left: 15%;
+    padding-left: 5%;
 }
 
 .facebook, .instagram, .youtube {
     padding-right: 10px;
 }
 
-.facebook, .instagram, .youtube:hover{
+.facebook:hover, .instagram:hover, .youtube:hover{
     cursor: pointer;
+    opacity: 0.5;
 }
 
 .ikoner {
     margin-right: 20px;
-
 }
 
+.meny{
+    padding-left: 40%;
+    font-size: 2vw;
+}
 
 /* Hamburger */
 .hamburger1 {
@@ -87,8 +92,12 @@ a {
     cursor: pointer;
     position: relative;
     z-index: 2;
-    margin-right: 25vw;
+    margin-right: 20vw;
     margin-left: 40px;
+}
+
+.hamburger1:hover{
+    opacity: 1.0;
 }
 
 .hamburger1 div {
@@ -104,67 +113,52 @@ a {
     border-radius: 3px;
 }
 
+
 #toggle1 {
     display: none;
 }
 
 #toggle1:checked + .hamburger1 .top {
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     margin-top: 22.5px;
 }
 
 #toggle1:checked + .hamburger1 .meat {
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    margin-top: -5px;
+    margin-top: -7px;
 }
 
 #toggle1:checked + .hamburger1 .bottom {
-    -webkit-transform: scale(0);
     transform: scale(0);
 }
 
 #toggle1:checked ~ .menu1 {
-    height: 340px;
+    height: 700px;
 }
 
 
-/* Menu */
+/* Dropdown-meny */
 .menu1 {
-    width: 30%;
-    background-color: black;
+    margin-top: 1%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.85);
     right: 11%;
-    display: -ms-grid;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 25px;
-    padding: 0;
-    list-style: none;
-    clear: both;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     height: 0px;
     overflow: hidden;
     transition: height .4s ease;
     z-index: 2;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: absolute;
-}
-
-.menu1 a:first-child {
-    margin-top: 40px;
-}
-
-.menu1 a:last-child {
-    margin-bottom: 40px;
 }
 
 .link1 {
     width: 100%;
     margin: 0;
-    padding: 10px 0;
-    font: 700 20px 'Oswald', sans-serif;
+    padding: 5px 0;
+    font: 20px 'Oswald', sans-serif;
 }
 
 .dropdown:hover .dropdown-content {
@@ -178,9 +172,6 @@ a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
-
-
 
 .flex-container {
     display: flex;
@@ -251,15 +242,12 @@ h2{
     letter-spacing: 5px;
     color: #ffcc00;
 }
+
 #calendarlink:hover {
     letter-spacing: 5px;
     color: #ffcc00;
 }
 
-.fas.fa-chevron-right {
-    color: #ffcc00;
-    padding-left: 5px;
-}
 
 .arrow {
     border: solid yellow;
@@ -270,12 +258,10 @@ h2{
 
 .right {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
 }
 
 .down {
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
 
 .pil{
@@ -308,5 +294,79 @@ h2{
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10%;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
 }
+
+
+
+
+/* GALLERY */
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    background-color: rgba(14, 11, 11, 0.73);
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-container-4{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2%;
+    justify-content: center;
+}
+
+.bilder{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-size: 4vw;
+
+}
+
+.flex-container-6{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
