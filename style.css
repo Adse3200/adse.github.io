@@ -7,89 +7,214 @@ html,body{
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: #5c8c5c;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 /* ---------------------NAV BAR STREKER--------------------- */
-.big_wrapper{
-   display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+
+.bilde-container {
+    width: 300px;
+    margin-top: 3vw;
+    padding-left: 30%;
 
 }
 
-.nav {
-    position: relative;
-    padding-right: 10%;
+.pil-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 55%;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: blue;
-}
-
-.nav:hover {
+.bilde1:hover{
     cursor: pointer;
 }
 
-.nav:hover .dropdown-content {
-    display: block;
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #02173F;
+    height: 60px;
+    padding-right: 20px;
 }
 
-/*     NAV-BARELEMENTER     */
-.nav div{
-    height: 20px;
+.hamburger-wrapper{
+    margin-right: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.flex-container-2{
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 15%;
+}
+
+.ikoner {
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+}
+
+.facebook, .instagram, .youtube {
+    padding-right: 10px;
+}
+
+.facebook, .instagram, .youtube:hover{
+    cursor: pointer;
+}
+
+.ikoner {
+    margin-right: 20px;
+
+}
+
+
+/* Hamburger */
+.hamburger1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-right: 25vw;
+    margin-left: 40px;
+}
+
+.hamburger1 div {
     background-color: white;
-    margin: 26px;
-    border-radius: 25px;
-    transition: 0.8s;
+    position: relative;
+    width: 60px;
+    height: 9px;
+    margin-top: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 3px;
 }
 
-.one {
-    width: 150px;
+#toggle1 {
+    display: none;
+}
 
+#toggle1:checked + .hamburger1 .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+    height: 340px;
 }
 
 
-.two {
-    width: 80px;
+/* Menu */
+.menu1 {
+    width: 30%;
+    background-color: black;
+    right: 11%;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 25px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease;
+    z-index: 2;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: absolute;
 }
 
-.three {
-    width: 125px;
+.menu1 a:first-child {
+    margin-top: 40px;
 }
 
-.nav:hover div{
-    width: 150px;
+.menu1 a:last-child {
+    margin-bottom: 40px;
 }
+
+.link1 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    font: 700 20px 'Oswald', sans-serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    z-index: 2; /* Setter en høy z-indeksverdi for å plassere den over alt annet */
+}
+.link1:hover {
+    background-color: #fff;
+    color: rgb(61, 61, 61);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
 
 
 .flex-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15%;
-    background-color: gray;
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0, 0.85);
     height: 50%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
     margin-right: 20%;
 }
 
 h1{
-    font-size: 10vw;
-    margin-bottom: 5px;
+    font-size: 8vw;
+    margin-bottom: -20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.linje{
+    width: 120px;
+    height: 5px;
+    background-color: #ffcc00;
+    justify-content: flex-start;
+    margin-left: 15px;
+
 }
 
 h2{
     font-size: 6vw;
     color: #ffcc00;
     margin-top: 10px;
+    margin-bottom: -5%;
 }
 
 .hovedside {
@@ -100,4 +225,38 @@ h2{
     height: 50vh;
 }
 
+
+
+.div-2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* Øk bredden etter behov */
+}
+
+
+
+.div-2 a {
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 15%;
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#soalink:hover {
+    letter-spacing: 5px;
+}
+
+#communitylink:hover {
+    letter-spacing: 5px;
+}
+#calendarlink:hover {
+    letter-spacing: 5px;
+}
+
+.fas.fa-chevron-right {
+    color: #ffcc00;
+    padding-left: 5px;
+}
 
