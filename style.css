@@ -77,11 +77,14 @@ a {
 }
 
 .meny{
-    padding-left: 40%;
     font-size: 2vw;
+    position: relative;
+    left: 15vw;
+    font-family: Oswald, serif;
+
 }
 
-/* Hamburger */
+/* Hamburger KILDE PÅ HVOR DETTE ER TATT FRA  */
 .hamburger1 {
     display: flex;
     flex-direction: column;
@@ -133,7 +136,7 @@ a {
 }
 
 #toggle1:checked ~ .menu1 {
-    height: 700px;
+    height: 500px;
 }
 
 
@@ -141,14 +144,13 @@ a {
 .menu1 {
     margin-top: 1%;
     width: 20%;
-    background-color: rgba(0, 0, 0, 0.85);
-    right: 11%;
+    background-color: rgba(44, 42, 42, 0.88);
+    right: 12%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 0px;
+    height: 0;
     overflow: hidden;
-    transition: height .4s ease;
     z-index: 2;
     transition: all 0.3s ease;
     position: absolute;
@@ -156,9 +158,9 @@ a {
 
 .link1 {
     width: 100%;
-    margin: 0;
     padding: 5px 0;
-    font: 20px 'Oswald', sans-serif;
+    font: 25px 'Oswald', sans-serif;
+    margin: 6% 0 0;
 }
 
 .dropdown:hover .dropdown-content {
@@ -167,10 +169,11 @@ a {
     z-index: 2; /* Setter en høy z-indeksverdi for å plassere den over alt annet */
 }
 .link1:hover {
-    background-color: #fff;
-    color: rgb(61, 61, 61);
+    color: #ffcc00;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.24);
 }
 
 .flex-container {
@@ -219,9 +222,12 @@ h2{
 .div-2 {
     display: flex;
     flex-direction: column;
-    width: 60%; /* Øk bredden etter behov */
+    width: 60%;
 }
 
+.bilde1{
+    margin-top: -300px;
+}
 
 
 .div-2 a {
@@ -290,19 +296,32 @@ h2{
     margin-top: 10%;
 }
 
+#bilde10 {
+    width: 100%;
+    height: auto;
+}
+
 #about {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10%;
     padding-bottom: 10%;
+    font-size: 1.5vw;
 }
 
-
+.bigletter{
+    font-size: 7vw;
+    float: left;
+    line-height: 0.3;
+}
 
 
 /* GALLERY */
 div.gallery {
     border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 div.gallery:hover {
@@ -356,7 +375,15 @@ div.desc {
     justify-content: center;
 }
 
-.bilder{
+.linje3{
+    width: 30%;
+    background-color: #ffcc00;
+    height: 3px;
+    margin-left: 35%;
+
+}
+
+.bilderoverskrift{
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
@@ -369,4 +396,42 @@ div.desc {
     justify-content: center;
     margin-bottom: 5%;
 }
+
+.gallerybutton {
+    background-color: white;
+    width: 10vw;
+    height: 3vw;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.gallerybutton:hover{
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.desc-spring {
+    padding-top: 5%;
+    padding-bottom: 9%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.tekst {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.36);
+    padding: 10px;
+    font-size: 18px;
+}
+
+
 
